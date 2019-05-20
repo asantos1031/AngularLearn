@@ -1,0 +1,15 @@
+<button
+  class="btn btn-primary"
+  (click)="TogglePassword()"
+>
+  Display Details
+</button>
+
+<p *ngIf="showPass">Secret password = tuna</p>
+
+<p *ngFor="let amt of totalClicks"
+   [ngStyle]="{backgroundColor: getColor(amt)}"
+    [ngClass]="{'white-text': amt >= 5}"
+>
+  {{amt}}
+</p>
