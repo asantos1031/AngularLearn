@@ -1,4 +1,10 @@
 <div class="container">
+  <app-game-control
+  (numberEvent)="onIntervalFired($event)" ></app-game-control>
+  <hr>
+  <app-even *ngFor="let count of evenNumber" [myValue]="count"></app-even>
+  <app-odd *ngFor="let count of oddNumber" [myValue]="count"></app-odd>
+  <hr>
   <app-cockpit
   (serverCreated)="onServerAdded($event)"
   (blueprintCreated)="onBlueprintAdded($event)"
