@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {Pages} from './pages.model';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +6,6 @@ import {Pages} from './pages.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  activePage = 'recipe';
-
-  changeToPage(newpage: string) {
-    this.activePage = newpage;
-  }
+  numbers = [1, 2, 3, 4, 5];
+  onlyOdd = false;
 }

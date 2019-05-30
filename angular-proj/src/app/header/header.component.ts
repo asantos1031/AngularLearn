@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
+import {Pages} from '../pages.model';
 
 @Component({
   selector: 'app-header',
@@ -6,4 +7,10 @@ import {Component} from '@angular/core';
 })
 export class HeaderComponent {
 
+  @Output() showPage = new EventEmitter<string>();
+
+
+  onHeaderClick(header: string) {
+    this.showPage.emit(header);
+  }
 }
