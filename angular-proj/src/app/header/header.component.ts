@@ -1,5 +1,4 @@
 import {Component, EventEmitter, Output} from '@angular/core';
-import {Pages} from '../pages.model';
 
 @Component({
   selector: 'app-header',

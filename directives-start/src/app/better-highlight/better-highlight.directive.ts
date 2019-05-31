@@ -8,7 +8,7 @@ export class BetterHighlightDirective implements OnInit {
   @Input() defaultColor = 'transparent';
   @Input('appBetterHighlight') highlightColor = 'blue';
 
-  constructor(private elementRef: ElementRef, private renderer: Renderer2, private viewContainer: ViewContainerRef) {
+  constructor(private elementRef: ElementRef, private renderer: Renderer2) {
 
   }
   set appBetterHighlight(condition: boolean) {
