@@ -1,21 +1,30 @@
 import {Recipe} from './recipe.model';
 import {EventEmitter} from '@angular/core';
+import {Ingredient} from '../shared/ingredient.model';
 
 export class RecipeService {
 
   private recipes: Recipe[] = [
     new Recipe('Eggs', 'Scrambled eggs',
       'https://www.wellplated.com/wp-content/uploads/2017/12/Hoppin-John-recipe-600x629.jpg',
-      ['Eggs', 'Onions', 'tomatoes']),
+      [new Ingredient('Eggs', 2),
+                  new Ingredient('Onions', 3),
+                  new Ingredient('tomatoes', 4)]),
     new Recipe('Ham', 'Scrambled ham',
       'https://www.wellplated.com/wp-content/uploads/2017/12/Hoppin-John-recipe-600x629.jpg',
-      ['Ham', 'Oil', 'Pasta']),
+      [ new Ingredient('Ham', 2),
+                    new Ingredient('Oil', 3),
+                    new Ingredient('Pasta',4)]),
     new Recipe('Bacon', 'Scrambled bacon',
       'https://www.wellplated.com/wp-content/uploads/2017/12/Hoppin-John-recipe-600x629.jpg',
-      ['Bacon', 'Salt', 'Pepper']),
+      [new Ingredient('Bacon', 2),
+                    new Ingredient('Salt', 3),
+                    new Ingredient('Pepper', 4)]),
     new Recipe('Cheese', 'Scrambled cheese',
       'https://www.wellplated.com/wp-content/uploads/2017/12/Hoppin-John-recipe-600x629.jpg',
-      ['Cheese', 'Blue Cheese', 'Parmesan Cheese'])
+      [new Ingredient('Cheese', 2),
+                    new Ingredient('Blue Cheese', 3),
+                    new Ingredient('Parmesan Cheese', 5)])
   ];
 
   recipeSelected = new EventEmitter<Recipe>();
