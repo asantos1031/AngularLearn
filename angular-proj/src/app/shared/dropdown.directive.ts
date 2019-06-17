@@ -18,12 +18,5 @@ export class DropdownDirective implements OnInit {
     }
   }
 
-  @HostListener('mouseleave') toggleClose() {
-    if (this.opened) {
-      this.opened = false;
-      this.renderer.removeClass(this.elementRef.nativeElement, 'open');
-    }
-  }
-
   ngOnInit(): void {}
 }
